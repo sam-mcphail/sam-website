@@ -245,13 +245,38 @@ body {
 .versus-team {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   width: 50%;
   border: 1px solid black;
 }
+
 .versus-goalkeepers {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+.versus-card {
+  width: 8rem;
+  height: 12rem;
+  border: 1px solid black;
+  background-color: rgb(21, 24, 31);
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.versus-card-text {
+  text-align: center;
+  margin: 0;
+}
+
+.versus-card-image {
+  width: 65%;
+  align-self: center;
+  border: 1px solid white;
+  border-radius: 2px;
 }
 
 /* WORDLE GAME */

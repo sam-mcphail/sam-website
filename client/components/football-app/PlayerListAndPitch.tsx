@@ -16,6 +16,12 @@ export default function PlayerListAndPitch() {
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   ])
 
+  const [submittedPlayerArray, setSubmittedPlayerArray] = useState([
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  ])
+
+  const [versusPitchVisibility, setVersusPitchVisibility] = useState(false)
+
   let allSelect = true
   let goalkeeperSelect = false
   let defenderSelect = false
@@ -121,6 +127,11 @@ export default function PlayerListAndPitch() {
     else selected = index
   }
 
+  function handleSubmitPlayersButton() {
+    setSubmittedPlayerArray(playerArray)
+    setVersusPitchVisibility(true)
+  }
+
   if (!players || isLoading) {
     return (
       <>
@@ -182,6 +193,7 @@ export default function PlayerListAndPitch() {
           )}
         </div>
         <div className="pitch">
+          <button onClick={handleSubmitPlayersButton}>Submit Players</button>
           <div className="forwards">
             {forwardsArray.map((p, i) => (
               <div key={i}>
@@ -220,8 +232,11 @@ export default function PlayerListAndPitch() {
           </div>
         </div>
       </div>
-
-      <VersusPitch players={playerArray} />
+      {versusPitchVisibility ? (
+        <VersusPitch players={submittedPlayerArray} />
+      ) : (
+        <h1>Submit team to play game</h1>
+      )}
     </div>
   )
 }
