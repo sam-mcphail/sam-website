@@ -1,0 +1,387 @@
+body {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(35 39 47);
+}
+
+.header {
+  background: rgb(5, 0, 158);
+  display: flex;
+  height: 15dvh;
+  margin: -0.5rem;
+  border-bottom: 3px solid black;
+  color: black;
+}
+.header-name {
+  height: 50%;
+  max-width: 20rem;
+  margin: 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-link {
+  height: 50%;
+  min-width: 12rem;
+  margin: 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid gray;
+}
+
+.header-link:hover {
+  border-bottom: 2px solid black;
+}
+
+.footer {
+  background: rgb(5, 0, 158);
+  display: flex;
+  height: 10dvh;
+  margin: -0.5rem;
+  border-top: 3px solid black;
+  color: black;
+}
+
+.footer-info {
+  height: 50%;
+  max-width: 12rem;
+  margin: 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5%;
+}
+
+.home-page {
+  min-height: 130dvh;
+}
+
+.about-page {
+  height: 130dvh;
+}
+
+.coding-page {
+  height: 130dvh;
+}
+
+.football-page {
+  height: 130dvh;
+}
+
+.wordle-page {
+  height: 130dvh;
+}
+
+.page-title {
+  text-align: center;
+}
+
+.list-and-pitch {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.player-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 5rem;
+  width: 30dvw;
+  height: 110dvh;
+  overflow: scroll;
+  border: solid 0.2rem black;
+}
+
+.player-list-title {
+  text-align: center;
+}
+
+.list-player {
+  background-color: rgb(21, 24, 31);
+  width: 30dvw;
+  height: 20dvh;
+  border: 1px solid black;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.list-player-image {
+  border: solid 1px white;
+  border-radius: 5px;
+  width: 20%;
+  margin: auto auto auto auto;
+}
+
+.list-player-details {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.list-player-name {
+  text-align: center;
+  margin-bottom: 0.4rem;
+}
+
+.list-player-info {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.list-player-stats-1 {
+  width: 45%;
+}
+
+.list-player-stats-2 {
+  width: 45%;
+}
+
+.pitch {
+  width: 50dvw;
+  background-color: green;
+  height: 110dvh;
+  border: solid 0.5rem white;
+}
+
+.pitch-title {
+  text-align: center;
+}
+
+.card {
+  width: 10rem;
+  height: 14rem;
+  border: 1px solid black;
+  background-color: rgb(21, 24, 31);
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.card-text {
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-image {
+  width: 55%;
+  align-self: center;
+  border: 1px solid white;
+  border-radius: 2px;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.pitch {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.forwards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.midfielders {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.defenders {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.goalkeepers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.wordle-game {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.guess-board {
+  width: 20rem;
+  height: 24rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.guess-row {
+  height: 16.7%;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.guess-square {
+  width: 20%;
+  height: 100%;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guess-square-correct {
+  width: 20%;
+  height: 100%;
+  background-color: green;
+  border: 1px solid white;
+  border-radius: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guess-square-wrong-placement {
+  width: 20%;
+  height: 100%;
+  background-color: orange;
+  border: 1px solid white;
+  border-radius: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guess-letter {
+  margin: 0;
+}
+
+.keyboard {
+  width: 30rem;
+  height: 9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.keyboard-row {
+  display: flex;
+  flex-direction: row;
+  gap: 0.3rem;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.keyboard-key {
+  text-align: center;
+  width: 3rem;
+  height: 3rem;
+  background-color: rgb(155, 155, 155);
+  border-radius: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.keyboard-key-used {
+  text-align: center;
+  width: 3rem;
+  height: 3rem;
+  background-color: rgb(110, 110, 110);
+  border-radius: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.keyboard-key-wrong {
+  text-align: center;
+  width: 3rem;
+  height: 3rem;
+  background-color: orange;
+  border-radius: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.keyboard-key-correct {
+  text-align: center;
+  width: 3rem;
+  height: 3rem;
+  background-color: green;
+  border-radius: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.keyboard-enter {
+  text-align: center;
+
+  width: 4.5rem;
+  height: 3rem;
+  background-color: rgb(155, 155, 155);
+  border-radius: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.keyboard-backspace {
+  width: 4.5rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(155, 155, 155);
+  border-radius: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wordle-other {
+  display: flex;
+  flex-direction: row;
+}
+
+.other-info {
+  width: 20rem;
+  height: 20rem;
+  border: 1px solid white;
+  background-color: black;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+
+.other-info-title {
+  text-align: center;
+  margin-top: 0.5rem;
+}
