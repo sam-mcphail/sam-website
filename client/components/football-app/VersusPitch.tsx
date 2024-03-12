@@ -7,44 +7,44 @@ export default function VersusPitch(props) {
     <div className="versus-pitch">
       <div className="versus-team">
         <div className="versus-goalkeepers">
-          <VersusCard playerId={props.players[10]} position={'Goalkeeper'} />
+          <VersusCard playerId={props.teamOne[10]} position={'Goalkeeper'} />
         </div>
         <div className="versus-goalkeepers">
-          <VersusCard playerId={props.players[9]} position={'Defender'} />
-          <VersusCard playerId={props.players[8]} position={'Defender'} />
-          <VersusCard playerId={props.players[7]} position={'Defender'} />
-          <VersusCard playerId={props.players[6]} position={'Defender'} />
+          <VersusCard playerId={props.teamOne[9]} position={'Defender'} />
+          <VersusCard playerId={props.teamOne[8]} position={'Defender'} />
+          <VersusCard playerId={props.teamOne[7]} position={'Defender'} />
+          <VersusCard playerId={props.teamOne[6]} position={'Defender'} />
         </div>
         <div className="versus-goalkeepers">
-          <VersusCard playerId={props.players[5]} position={'Midfielder'} />
-          <VersusCard playerId={props.players[4]} position={'Midfielder'} />
-          <VersusCard playerId={props.players[3]} position={'Midfielder'} />
+          <VersusCard playerId={props.teamOne[5]} position={'Midfielder'} />
+          <VersusCard playerId={props.teamOne[4]} position={'Midfielder'} />
+          <VersusCard playerId={props.teamOne[3]} position={'Midfielder'} />
         </div>
         <div className="versus-goalkeepers">
-          <VersusCard playerId={props.players[2]} position={'Forward'} />
-          <VersusCard playerId={props.players[1]} position={'Forward'} />
-          <VersusCard playerId={props.players[0]} position={'Forward'} />
+          <VersusCard playerId={props.teamOne[2]} position={'Forward'} />
+          <VersusCard playerId={props.teamOne[1]} position={'Forward'} />
+          <VersusCard playerId={props.teamOne[0]} position={'Forward'} />
         </div>
       </div>
       <div className="versus-team">
         <div className="versus-goalkeepers">
-          <VersusCard playerId={1} position={'Forward'} />
-          <VersusCard playerId={1} position={'Forward'} />
-          <VersusCard playerId={1} position={'Forward'} />
+          <VersusCard playerId={props.teamTwo[2]} position={'Forward'} />
+          <VersusCard playerId={props.teamTwo[1]} position={'Forward'} />
+          <VersusCard playerId={props.teamTwo[0]} position={'Forward'} />
         </div>
         <div className="versus-goalkeepers">
-          <VersusCard playerId={1} position={'Midfielder'} />
-          <VersusCard playerId={1} position={'Midfielder'} />
-          <VersusCard playerId={1} position={'Midfielder'} />
+          <VersusCard playerId={props.teamTwo[5]} position={'Midfielder'} />
+          <VersusCard playerId={props.teamTwo[4]} position={'Midfielder'} />
+          <VersusCard playerId={props.teamTwo[3]} position={'Midfielder'} />
         </div>
         <div className="versus-goalkeepers">
-          <VersusCard playerId={1} position={'Defender'} />
-          <VersusCard playerId={1} position={'Defender'} />
-          <VersusCard playerId={1} position={'Defender'} />
-          <VersusCard playerId={1} position={'Defender'} />
+          <VersusCard playerId={props.teamTwo[9]} position={'Defender'} />
+          <VersusCard playerId={props.teamTwo[8]} position={'Defender'} />
+          <VersusCard playerId={props.teamTwo[7]} position={'Defender'} />
+          <VersusCard playerId={props.teamTwo[6]} position={'Defender'} />
         </div>
         <div className="versus-goalkeepers">
-          <VersusCard playerId={1} position={'Goalkeeper'} />
+          <VersusCard playerId={props.teamTwo[10]} position={'Goalkeeper'} />
         </div>
       </div>
     </div>

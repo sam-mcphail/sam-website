@@ -5,6 +5,8 @@ import { Player } from '../../models/Models'
 import Card from './Card'
 import VersusPitch from './VersusPitch'
 
+const defaultPlayerArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
 export default function PlayerListAndPitch() {
   const {
     data: players,
@@ -12,61 +14,64 @@ export default function PlayerListAndPitch() {
     error,
   } = useQuery<Player[]>({ queryKey: ['players'], queryFn: getPlayers })
 
-  const [playerArray, setPlayerArray] = useState([
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-  ])
+  const [playerArray, setPlayerArray] = useState(defaultPlayerArray)
 
-  const [submittedPlayerArray, setSubmittedPlayerArray] = useState([
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-  ])
+  const [submittedPlayerOneArray, setSubmittedPlayerOneArray] =
+    useState(defaultPlayerArray)
+
+  const [submittedPlayerTwoArray, setSubmittedPlayerTwoArray] =
+    useState(defaultPlayerArray)
 
   const [versusPitchVisibility, setVersusPitchVisibility] = useState(false)
 
+  const [onePlayer, setOnePlayer] = useState(true)
+  const [twoPlayer, setTwoPlayer] = useState(false)
+
   let allSelect = true
-  let goalkeeperSelect = false
-  let defenderSelect = false
-  let midfielderSelect = false
-  let forwardSelect = false
+  // let goalkeeperSelect = false
+  // let defenderSelect = false
+  // let midfielderSelect = false
+  // let forwardSelect = false
 
-  function handleAllButtonClick() {
-    allSelect = true
-    goalkeeperSelect = false
-    midfielderSelect = false
-    defenderSelect = false
-    goalkeeperSelect = false
-  }
+  // function handleAllButtonClick() {
+  //   allSelect = true
+  //   goalkeeperSelect = false
+  //   midfielderSelect = false
+  //   defenderSelect = false
+  //   goalkeeperSelect = false
+  // }
 
-  function handleGoalKeeperButtonClick() {
-    allSelect = false
-    goalkeeperSelect = true
-    midfielderSelect = false
-    defenderSelect = false
-    goalkeeperSelect = false
-  }
+  // function handleGoalKeeperButtonClick() {
+  //   allSelect = false
+  //   goalkeeperSelect = true
+  //   midfielderSelect = false
+  //   defenderSelect = false
+  //   goalkeeperSelect = false
+  // }
 
-  function handleDefenderButtonClick() {
-    allSelect = false
-    goalkeeperSelect = false
-    midfielderSelect = true
-    defenderSelect = false
-    goalkeeperSelect = false
-  }
+  // function handleDefenderButtonClick() {
+  //   allSelect = false
+  //   goalkeeperSelect = false
+  //   midfielderSelect = true
+  //   defenderSelect = false
+  //   goalkeeperSelect = false
+  // }
 
-  function handleMidfielderButtonClick() {
-    allSelect = false
-    goalkeeperSelect = false
-    midfielderSelect = false
-    defenderSelect = true
-    goalkeeperSelect = false
-  }
+  // function handleMidfielderButtonClick() {
+  //   allSelect = false
+  //   goalkeeperSelect = false
+  //   midfielderSelect = false
+  //   defenderSelect = true
+  //   goalkeeperSelect = false
+  // }
 
-  function handleForwardButtonClick() {
-    allSelect = false
-    goalkeeperSelect = false
-    midfielderSelect = false
-    defenderSelect = false
-    goalkeeperSelect = true
-  }
+  // function handleForwardButtonClick() {
+  //   allSelect = false
+  //   goalkeeperSelect = false
+  //   midfielderSelect = false
+  //   defenderSelect = false
+  //   goalkeeperSelect = true
+  // }
 
   const forwardsArray = playerArray.slice(0, 3)
   const midfieldersArray = playerArray.slice(3, 6)
@@ -127,9 +132,32 @@ export default function PlayerListAndPitch() {
     else selected = index
   }
 
+  function handleOnePlayerClick() {
+    setOnePlayer(true)
+    setTwoPlayer(false)
+  }
+
+  function handleTwoPlayerClick() {
+    setOnePlayer(false)
+    setTwoPlayer(true)
+  }
+
   function handleSubmitPlayersButton() {
-    setSubmittedPlayerArray(playerArray)
+    setSubmittedPlayerOneArray(playerArray)
     setVersusPitchVisibility(true)
+    setPlayerArray(defaultPlayerArray)
+  }
+
+  function handleSubmitTeamOneButton() {
+    setSubmittedPlayerOneArray(playerArray)
+    setVersusPitchVisibility(true)
+    setPlayerArray(defaultPlayerArray)
+  }
+
+  function handleSubmitTeamTwoButton() {
+    setSubmittedPlayerTwoArray(playerArray)
+    setVersusPitchVisibility(true)
+    setPlayerArray(defaultPlayerArray)
   }
 
   if (!players || isLoading) {
@@ -150,17 +178,19 @@ export default function PlayerListAndPitch() {
 
   return (
     <div className="list-pitch-and-versus-pitch">
+      <button onClick={handleOnePlayerClick}>1 Player</button>
+      <button onClick={handleTwoPlayerClick}>2 Player</button>
       <div className="list-and-pitch">
         <div className="player-list">
           <h2 className="player-list-title">Player list</h2>
           <button onClick={handleClearSelection}>Clear selection</button>
-          <div className="position-buttons">
+          {/* <div className="position-buttons">
             <button onClick={handleAllButtonClick}>All</button>
             <button onClick={handleGoalKeeperButtonClick}>Goalkeepers</button>
             <button onClick={handleDefenderButtonClick}>Defenders</button>
             <button onClick={handleMidfielderButtonClick}>Midfielders</button>
             <button onClick={handleForwardButtonClick}>Forwards</button>
-          </div>
+          </div> */}
           {players.map((p) =>
             allSelect ? (
               <div
@@ -193,7 +223,15 @@ export default function PlayerListAndPitch() {
           )}
         </div>
         <div className="pitch">
-          <button onClick={handleSubmitPlayersButton}>Submit Players</button>
+          {onePlayer ? (
+            <button onClick={handleSubmitPlayersButton}>Submit Players</button>
+          ) : twoPlayer ? (
+            <div>
+              <button onClick={handleSubmitTeamOneButton}>Submit Team 1</button>
+              <button onClick={handleSubmitTeamTwoButton}>Submit Team 2</button>
+            </div>
+          ) : null}
+
           <div className="forwards">
             {forwardsArray.map((p, i) => (
               <div key={i}>
@@ -233,7 +271,17 @@ export default function PlayerListAndPitch() {
         </div>
       </div>
       {versusPitchVisibility ? (
-        <VersusPitch players={submittedPlayerArray} />
+        onePlayer ? (
+          <VersusPitch
+            teamOne={submittedPlayerOneArray}
+            teamTwo={[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]}
+          />
+        ) : twoPlayer ? (
+          <VersusPitch
+            teamOne={submittedPlayerOneArray}
+            teamTwo={submittedPlayerTwoArray}
+          />
+        ) : null
       ) : (
         <h1>Submit team to play game</h1>
       )}
