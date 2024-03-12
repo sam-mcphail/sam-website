@@ -250,7 +250,7 @@ body {
   border: 1px solid black;
 }
 
-.versus-goalkeepers {
+.versus-group {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
