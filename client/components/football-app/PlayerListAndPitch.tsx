@@ -160,6 +160,10 @@ export default function PlayerListAndPitch() {
     setPlayerArray(defaultPlayerArray)
   }
 
+  function handleDefaultPick() {
+    setSubmittedPlayerOneArray([1, 2, 3, 4, 12, 13, 6, 7, 8, 9, 5])
+  }
+
   if (!players || isLoading) {
     return (
       <>
@@ -224,7 +228,12 @@ export default function PlayerListAndPitch() {
         </div>
         <div className="pitch">
           {onePlayer ? (
-            <button onClick={handleSubmitPlayersButton}>Submit Players</button>
+            <>
+              <button onClick={handleSubmitPlayersButton}>
+                Submit Players
+              </button>
+              <button onClick={handleDefaultPick}>Default pick</button>
+            </>
           ) : twoPlayer ? (
             <div>
               <button onClick={handleSubmitTeamOneButton}>Submit Team 1</button>
@@ -274,7 +283,7 @@ export default function PlayerListAndPitch() {
         onePlayer ? (
           <VersusPitch
             teamOne={submittedPlayerOneArray}
-            teamTwo={[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]}
+            teamTwo={[1, 2, 3, 4, 12, 13, 6, 7, 8, 9, 5]}
           />
         ) : twoPlayer ? (
           <VersusPitch

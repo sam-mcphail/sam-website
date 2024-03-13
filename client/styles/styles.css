@@ -284,7 +284,7 @@ body {
   justify-content: space-around;
 }
 
-.versus-card {
+.versus-card-team-one {
   width: 8rem;
   height: 12rem;
   border: 1px solid black;
@@ -293,6 +293,41 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+.versus-card-team-two {
+  width: 8rem;
+  height: 12rem;
+  border: 1px solid black;
+  background-color: rgb(21, 24, 31);
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.versus-card-team-one:hover {
+  width: 8rem;
+  height: 12rem;
+  border: 1px solid black;
+  background-color: rgb(21, 24, 31);
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  transform: skew(2deg, -2deg);
+}
+
+.versus-card-team-two:hover {
+  width: 8rem;
+  height: 12rem;
+  border: 1px solid black;
+  background-color: rgb(21, 24, 31);
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  transform: skew(-2deg, 2deg);
 }
 
 .versus-card-text {
