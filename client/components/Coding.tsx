@@ -19,6 +19,9 @@ export default function Coding() {
           <Link to="/wordle">
             <p>Wordle Clone</p>
           </Link>
+          <Link to="/calculator">
+            <p>Calculator App</p>
+          </Link>
         </div>
       </div>
       <Footer />
