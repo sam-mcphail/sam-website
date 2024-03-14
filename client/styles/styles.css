@@ -1,3 +1,5 @@
+/* General */
+
 body {
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -75,7 +77,7 @@ body {
 }
 
 .football-page {
-  height: 130dvh;
+  height: 300dvh;
 }
 
 .wordle-page {
@@ -86,11 +88,20 @@ body {
   text-align: center;
 }
 
+/* FOOTBALL APP */
+
+.list-pitch-and-versus-pitch {
+  display: flex;
+  flex-direction: column;
+}
+
 .list-and-pitch {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
+
+/* PLAYER LIST */
 
 .player-list {
   display: flex;
@@ -149,11 +160,16 @@ body {
   width: 45%;
 }
 
+/* PITCH */
+
 .pitch {
   width: 50dvw;
   background-color: green;
   height: 110dvh;
   border: solid 0.5rem white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .pitch-title {
@@ -190,12 +206,6 @@ body {
   justify-content: space-evenly;
 }
 
-.pitch {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
 .forwards {
   display: flex;
   flex-direction: row;
@@ -220,11 +230,127 @@ body {
   justify-content: space-around;
 }
 
+/* VERSUS PITCH */
+
+.versus-pitch {
+  width: 96dvw;
+  background-color: green;
+  height: 96dvh;
+  border: solid 0.5rem white;
+  display: flex;
+  flex-direction: row;
+}
+
+.versus-half-pitch {
+  width: 50%;
+  height: 95%;
+}
+
+.versus-pitch-team-one-title {
+  height: 5%;
+  margin: 0;
+  text-align: center;
+  /* border-right: solid 0.25rem white; */
+}
+
+.versus-pitch-team-two-title {
+  height: 5%;
+  margin: 0;
+  text-align: center;
+  border-left: solid 0.25rem white;
+}
+
+.versus-team-one {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  /* border-right: solid 0.25rem white; */
+}
+
+.versus-team-two {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  border-left: solid 0.25rem white;
+}
+
+.versus-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.versus-card-team-one {
+  width: 8rem;
+  height: 12rem;
+  border: 1px solid black;
+  background-color: rgb(21, 24, 31);
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.versus-card-team-two {
+  width: 8rem;
+  height: 12rem;
+  border: 1px solid black;
+  background-color: rgb(21, 24, 31);
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.versus-card-team-one:hover {
+  width: 8rem;
+  height: 12rem;
+  border: 1px solid black;
+  background-color: rgb(21, 24, 31);
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  transform: skew(2deg, -2deg);
+}
+
+.versus-card-team-two:hover {
+  width: 8rem;
+  height: 12rem;
+  border: 1px solid black;
+  background-color: rgb(21, 24, 31);
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  transform: skew(-2deg, 2deg);
+}
+
+.versus-card-text {
+  text-align: center;
+  margin: 0;
+}
+
+.versus-card-image {
+  width: 65%;
+  align-self: center;
+  border: 1px solid white;
+  border-radius: 2px;
+}
+
+/* WORDLE GAME */
+
 .wordle-game {
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
+
+/* GUESS BOARD */
 
 .guess-board {
   width: 20rem;
@@ -279,6 +405,8 @@ body {
 .guess-letter {
   margin: 0;
 }
+
+/* KEYBOARD */
 
 .keyboard {
   width: 30rem;
@@ -365,6 +493,8 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+/* OTHER */
 
 .wordle-other {
   display: flex;
