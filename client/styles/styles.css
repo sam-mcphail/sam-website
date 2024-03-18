@@ -84,6 +84,10 @@ body {
   height: 130dvh;
 }
 
+.calc-page {
+  height: 130dvh;
+}
+
 .page-title {
   text-align: center;
 }
@@ -514,4 +518,54 @@ body {
 .other-info-title {
   text-align: center;
   margin-top: 0.5rem;
+}
+
+/* CALCULATOR APP */
+
+.calc {
+  background-color: gray;
+  border: solid 2px white;
+  border-radius: 3rem;
+  height: 40rem;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.calc-text-box {
+  width: 20rem;
+  height: 6rem;
+  background-color: white;
+  border-radius: 1rem;
+  color: black;
+  border: 3px solid black;
+  font-family: 'VT323', monospace;
+}
+
+.calc-all-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.calc-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.calc-button {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 1rem;
+  border: 3px solid black;
+}
+
+.calc-half-button {
+  width: 6rem;
+  height: 3rem;
+  border-radius: 1rem;
 }
