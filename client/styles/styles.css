@@ -88,6 +88,10 @@ body {
   height: 130dvh;
 }
 
+.tic-tac-toe-page {
+  height: 130dvh;
+}
+
 .page-title {
   text-align: center;
 }
@@ -568,4 +572,24 @@ body {
   width: 6rem;
   height: 3rem;
   border-radius: 1rem;
+}
+
+/* TIC TAC TOE APP */
+
+.ttt-board {
+  display: flex;
+  flex-direction: column;
+}
+
+.ttt-board-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.ttt-board-square {
+  color: black;
+  width: 5rem;
+  height: 5rem;
+  border: 2px solid black;
+  background-color: white;
 }

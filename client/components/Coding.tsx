@@ -22,6 +22,9 @@ export default function Coding() {
           <Link to="/calculator">
             <p>Calculator App</p>
           </Link>
+          <Link to="/tic-tac-toe">
+            <p>Tic Tac Toe</p>
+          </Link>
         </div>
       </div>
       <Footer />
