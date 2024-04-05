@@ -96,6 +96,25 @@ body {
   text-align: center;
 }
 
+/* CODING PAGE */
+
+.projects {
+  display: grid;
+  grid-template-columns: 30dvw 30dvw 30dvw;
+  gap: 1rem;
+  justify-items: center;
+}
+
+.project-card {
+  border-radius: 1rem;
+  height: 30rem;
+  width: 20rem;
+}
+
+.project-card:hover {
+  background-color: rgb(23, 27, 33);
+}
+
 /* FOOTBALL APP */
 
 .list-pitch-and-versus-pitch {
@@ -576,6 +595,11 @@ body {
 
 /* TIC TAC TOE APP */
 
+.ttt-board-and-table {
+  display: flex;
+  flex-direction: row;
+}
+
 .ttt-board {
   display: flex;
   flex-direction: column;
@@ -592,4 +616,38 @@ body {
   height: 5rem;
   border: 2px solid black;
   background-color: white;
+}
+
+.ttt-next-game {
+  height: 3rem;
+}
+
+.ttt-prev-boards {
+  display: grid;
+  grid-template-columns: 0.1fr 0.1fr 0.1fr;
+  gap: 1rem;
+}
+
+.ttt-prev-board {
+  display: flex;
+  flex-direction: column;
+}
+
+.ttt-prev-board-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.ttt-prev-board-square {
+  color: black;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.ttt-table-element {
+  width: 5rem;
+  height: 2rem;
+  border: 2px solid gray;
 }
