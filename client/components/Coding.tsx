@@ -2,6 +2,8 @@ import Header from './Header'
 import Footer from './Footer'
 import React from 'react'
 import { Link } from 'react-router-dom'
+import questionMark from '../images/question-mark.png'
+import wordlePic from '../images/wordlePic.png'
 
 export default function Coding() {
   return (
@@ -13,8 +15,9 @@ export default function Coding() {
         </div>
         <div className="projects">
           <div className="project-card">
-            <h1>Football Team Builder</h1>
+            <h1>Team Builder</h1>
             <p>Information about the project</p>
+            <img className="project-image" src={questionMark}></img>
             <Link to="/football-team-builder">
               <button>Check it out</button>
             </Link>
@@ -22,6 +25,7 @@ export default function Coding() {
           <div className="project-card">
             <h1>Wordle Clone</h1>
             <p>Information about the project</p>
+            <img className="project-image" src={wordlePic}></img>
             <Link to="/wordle">
               <button>Check it out</button>
             </Link>
@@ -29,6 +33,7 @@ export default function Coding() {
           <div className="project-card">
             <h1>Calculator App</h1>
             <p>Information about the project</p>
+            <img className="project-image" src={questionMark}></img>
             <Link to="/calculator">
               <button>Check it out</button>
             </Link>
@@ -36,6 +41,7 @@ export default function Coding() {
           <div className="project-card">
             <h1>Tic Tac Toe</h1>
             <p>Information about the project</p>
+            <img className="project-image" src={questionMark}></img>
             <Link to="/tic-tac-toe">
               <button>Check it out</button>
             </Link>

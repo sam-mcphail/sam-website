@@ -9,6 +9,9 @@ export default function Home() {
       <div className="home-page">
         <div className="page-title">
           <h1>Hello world!</h1>
+          <p></p>
+          <p></p>
+          <p></p>
         </div>
       </div>
       <Footer />

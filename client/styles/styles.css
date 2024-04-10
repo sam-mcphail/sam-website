@@ -6,14 +6,17 @@ body {
   background-color: rgb(35 39 47);
 }
 
+/* Header */
+
 .header {
-  background: rgb(5, 0, 158);
+  background: rgb(107, 102, 249);
   display: flex;
   height: 15dvh;
   margin: -0.5rem;
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid white;
   color: black;
 }
+
 .header-name {
   height: 50%;
   max-width: 20rem;
@@ -36,19 +39,22 @@ body {
   justify-content: center;
   text-decoration: none;
   color: black;
-  border-bottom: 2px solid gray;
-}
-
-.header-link:hover {
   border-bottom: 2px solid black;
 }
 
+.header-link:hover {
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+/* Footer */
+
 .footer {
-  background: rgb(5, 0, 158);
+  background: rgb(107, 102, 249);
   display: flex;
   height: 10dvh;
   margin: -0.5rem;
-  border-top: 3px solid black;
+  border-top: 3px solid white;
   color: black;
 }
 
@@ -64,32 +70,30 @@ body {
   border-radius: 5%;
 }
 
+/* Pages */
+
 .home-page {
   min-height: 130dvh;
 }
 
-.about-page {
-  height: 130dvh;
-}
-
 .coding-page {
-  height: 130dvh;
+  min-height: 130dvh;
 }
 
 .football-page {
-  height: 300dvh;
+  min-height: 130dvh;
 }
 
 .wordle-page {
-  height: 130dvh;
+  min-height: 130dvh;
 }
 
 .calc-page {
-  height: 130dvh;
+  min-height: 130dvh;
 }
 
 .tic-tac-toe-page {
-  height: 130dvh;
+  min-height: 130dvh;
 }
 
 .page-title {
@@ -99,20 +103,28 @@ body {
 /* CODING PAGE */
 
 .projects {
-  display: grid;
-  grid-template-columns: 30dvw 30dvw 30dvw;
-  gap: 1rem;
-  justify-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .project-card {
   border-radius: 1rem;
   height: 30rem;
   width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .project-card:hover {
   background-color: rgb(23, 27, 33);
+}
+
+.project-image {
+  height: 50%;
+  border-radius: 0.5rem;
+  border: 1px solid white;
 }
 
 /* FOOTBALL APP */
@@ -597,7 +609,7 @@ body {
 
 .ttt-board-and-table {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .ttt-board {
