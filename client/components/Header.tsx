@@ -61,9 +61,9 @@ export default function Header() {
       >
         <h2>LinkedIn</h2>
       </Link>
-      <div>
+      <div className="time-and-weather">
         <h2>Chirstchurch weather</h2>
-        <p>{weather?.current.temperature_2m}</p>
+        <p>{weather?.current.temperature_2m}°C</p>
         <p>{time}</p>
       </div>
     </div>

@@ -162,7 +162,7 @@ export default function TicTacToeGame() {
   }
 
   return (
-    <div>
+    <div className="ttt-game">
       <h1>Tic Tac Toe</h1>
       <div className="ttt-player-turn">
         {playerOneTurn ? (

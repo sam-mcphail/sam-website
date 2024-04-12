@@ -48,7 +48,8 @@ export default function Calc() {
   }
 
   return (
-    <>
+    <div className="calc-game">
+      <h1>Calculator App</h1>
       <div className="calc">
         <div className="calc-row">
           <div className="calc-text-box">
@@ -162,6 +163,6 @@ export default function Calc() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }

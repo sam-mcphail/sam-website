@@ -3,7 +3,10 @@ import Footer from './Footer'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import questionMark from '../images/question-mark.png'
-import wordlePic from '../images/wordlePic.png'
+import wordlePic from '../images/wordle-pic.png'
+import tttPic from '../images/ttt-pic.png'
+import calcPic from '../images/calc-pic.png'
+import teamPic from '../images/team-pic.png'
 
 export default function Coding() {
   return (
@@ -17,9 +20,9 @@ export default function Coding() {
           <div className="project-card">
             <h1>Team Builder</h1>
             <p>Information about the project</p>
-            <img className="project-image" src={questionMark}></img>
+            <img className="project-image" src={teamPic}></img>
             <Link to="/football-team-builder">
-              <button>Check it out</button>
+              <button className="project-button">Check it out</button>
             </Link>
           </div>
           <div className="project-card">
@@ -27,23 +30,23 @@ export default function Coding() {
             <p>Information about the project</p>
             <img className="project-image" src={wordlePic}></img>
             <Link to="/wordle">
-              <button>Check it out</button>
+              <button className="project-button">Check it out</button>
             </Link>
           </div>
           <div className="project-card">
-            <h1>Calculator App</h1>
+            <h1>Calculator</h1>
             <p>Information about the project</p>
-            <img className="project-image" src={questionMark}></img>
+            <img className="project-image" src={calcPic}></img>
             <Link to="/calculator">
-              <button>Check it out</button>
+              <button className="project-button">Check it out</button>
             </Link>
           </div>
           <div className="project-card">
             <h1>Tic Tac Toe</h1>
             <p>Information about the project</p>
-            <img className="project-image" src={questionMark}></img>
+            <img className="project-image" src={tttPic}></img>
             <Link to="/tic-tac-toe">
-              <button>Check it out</button>
+              <button className="project-button">Check it out</button>
             </Link>
           </div>
         </div>

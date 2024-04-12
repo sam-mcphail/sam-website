@@ -8,6 +8,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import WordleApp from './wordle-app/WordleApp'
 import CalcApp from './calculator-app/CalcApp'
 import TicTacToeApp from './tic-tac-toe-app/TicTacToeApp'
+import ChessApp from './chess-app/ChessApp'
 
 export default function App() {
   const router = createBrowserRouter([
@@ -17,6 +18,7 @@ export default function App() {
     { path: '/wordle', element: <WordleApp /> },
     { path: '/calculator', element: <CalcApp /> },
     { path: '/tic-tac-toe', element: <TicTacToeApp /> },
+    { path: '/chess', element: <ChessApp /> },
   ])
   return <RouterProvider router={router} />
 }

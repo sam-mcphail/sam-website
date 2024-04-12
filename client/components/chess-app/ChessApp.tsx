@@ -1,16 +1,16 @@
 import React from 'react'
 import Header from '../Header'
 import Footer from '../Footer'
-import Calculator from './Calc'
+import ChessGame from './ChessGame'
 
-export default function CalcApp() {
+export default function ChessApp() {
   return (
-    <div>
+    <>
       <Header />
-      <div className="calc-page">
-        <Calculator />
+      <div className="chess-page">
+        <ChessGame />
       </div>
       <Footer />
-    </div>
+    </>
   )
 }

@@ -1,7 +1,8 @@
 import request from 'superagent'
-const wordUrl = 'api/v2/dictionary'
+import { WordData } from '../models/WordModel'
+const wordUrl = 'https://api.dictionaryapi.dev/api/v2/entries/en'
 
-export async function getDefintion(word: string) {
+export async function getDefintion(word: string): Promise<WordData> {
   try {
     console.log(`${wordUrl}/${word}`)
     const response = await request.get(`${wordUrl}/${word}`)
