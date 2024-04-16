@@ -9,6 +9,7 @@ import WordleApp from './wordle-app/WordleApp'
 import CalcApp from './calculator-app/CalcApp'
 import TicTacToeApp from './tic-tac-toe-app/TicTacToeApp'
 import ChessApp from './chess-app/ChessApp'
+import CodingChallengesApp from './coding-challenges-app/CodingChallengesApp'
 
 export default function App() {
   const router = createBrowserRouter([
@@ -19,6 +20,7 @@ export default function App() {
     { path: '/calculator', element: <CalcApp /> },
     { path: '/tic-tac-toe', element: <TicTacToeApp /> },
     { path: '/chess', element: <ChessApp /> },
+    { path: '/coding-challenges', element: <CodingChallengesApp /> },
   ])
   return <RouterProvider router={router} />
 }

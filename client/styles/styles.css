@@ -103,6 +103,10 @@ body {
   min-height: 130dvh;
 }
 
+.cc-page {
+  min-height: 130dvh;
+}
+
 .page-title {
   text-align: center;
 }

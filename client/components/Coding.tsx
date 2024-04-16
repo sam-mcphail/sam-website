@@ -49,6 +49,14 @@ export default function Coding() {
               <button className="project-button">Check it out</button>
             </Link>
           </div>
+          <div className="project-card">
+            <h1>Challenges</h1>
+            <p>Information about the project</p>
+            <img className="project-image" src={questionMark}></img>
+            <Link to="/coding-challenges">
+              <button className="project-button">Check it out</button>
+            </Link>
+          </div>
         </div>
       </div>
       <Footer />
