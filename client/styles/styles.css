@@ -752,3 +752,16 @@ body {
   background-color: blue;
   border: 1px solid black;
 }
+
+/* Coding Challenges App */
+
+.cc-list {
+}
+
+.leap-years {
+}
+
+.ly-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}

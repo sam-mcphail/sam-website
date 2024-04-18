@@ -1,14 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import React, { useEffect, useState } from 'react'
-
-function getLeapYears() {
-  let leapYearsArr = []
-  for (let i = 1800; i <= 2400; i += 4) {
-    if (i % 400 == 0) leapYearsArr.push(i)
-    if (i % 100 !== 0) leapYearsArr.push(i)
-  }
-  return leapYearsArr
-}
+import { getLeapYears } from '../../../functions/functions'
 
 export default function LeapYears() {
   const {
@@ -41,7 +33,7 @@ export default function LeapYears() {
   return (
     <div className="leap-years">
       <h1>Leap Years</h1>
-      <button onClick={showLeapYears()}>Show leap years</button>
+      <button onClick={showLeapYears}>Show leap years</button>
       {visibility ? (
         <div className="ly-list">
           {years.map((ly) => (
