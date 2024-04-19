@@ -107,6 +107,10 @@ body {
   min-height: 130dvh;
 }
 
+.clock-page {
+  min-height: 130dvh;
+}
+
 .page-title {
   text-align: center;
 }
@@ -764,4 +768,224 @@ body {
 .ly-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+/* Clock App */
+
+.clock-container {
+  width: 70rem;
+  height: 18rem;
+  background-color: black;
+  justify-content: center;
+  align-content: center;
+  margin: 10rem;
+  border-radius: 3rem;
+  border: 1rem solid white;
+  filter: drop-shadow(10px -10px #454545);
+}
+
+.clock {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+/* 1 */
+
+.clock-one-square1 {
+  width: 6rem;
+  height: 6rem;
+  border-top: 10px solid black;
+  border-right: 10px solid white;
+  border-bottom: 5px solid black;
+  border-left: 10px solid black;
+}
+
+.clock-one-square2 {
+  width: 6rem;
+  height: 6rem;
+  border-top: 5px solid black;
+  border-right: 10px solid white;
+  border-bottom: 10px solid black;
+  border-left: 10px solid black;
+}
+
+/* 2 */
+
+.clock-two-square1 {
+  width: 6rem;
+  height: 6rem;
+  border-top: 10px solid white;
+  border-right: 10px solid white;
+  border-bottom: 5px solid white;
+  border-left: 10px solid black;
+}
+
+.clock-two-square2 {
+  width: 6rem;
+  height: 6rem;
+  border-top: 5px solid white;
+  border-right: 10px solid black;
+  border-bottom: 10px solid white;
+  border-left: 10px solid white;
+}
+
+/* 3 */
+
+.clock-three-square1 {
+  width: 6rem;
+  height: 6rem;
+  border-top: 10px solid white;
+  border-right: 10px solid white;
+  border-bottom: 5px solid white;
+  border-left: 10px solid black;
+}
+
+.clock-three-square2 {
+  width: 6rem;
+  height: 6rem;
+  border-top: 5px solid white;
+  border-right: 10px solid white;
+  border-bottom: 10px solid white;
+  border-left: 10px solid black;
+}
+
+/* 4 */
+
+.clock-four-square1 {
+  width: 6rem;
+  height: 6rem;
+  border-top: 10px solid black;
+  border-right: 10px solid white;
+  border-bottom: 5px solid white;
+  border-left: 10px solid white;
+}
+
+.clock-four-square2 {
+  width: 6rem;
+  height: 6rem;
+  border-top: 5px solid white;
+  border-right: 10px solid white;
+  border-bottom: 10px solid black;
+  border-left: 10px solid black;
+}
+
+/* 5 */
+
+.clock-five-square1 {
+  width: 6rem;
+  height: 6rem;
+  border-top: 10px solid white;
+  border-right: 10px solid black;
+  border-bottom: 5px solid white;
+  border-left: 10px solid white;
+}
+
+.clock-five-square2 {
+  width: 6rem;
+  height: 6rem;
+  border-top: 5px solid white;
+  border-right: 10px solid white;
+  border-bottom: 10px solid white;
+  border-left: 10px solid black;
+}
+
+/* 6 */
+
+.clock-six-square1 {
+  width: 6rem;
+  height: 6rem;
+  border-top: 10px solid white;
+  border-right: 10px solid black;
+  border-bottom: 5px solid white;
+  border-left: 10px solid white;
+}
+
+.clock-six-square2 {
+  width: 6rem;
+  height: 6rem;
+  border-top: 5px solid white;
+  border-right: 10px solid white;
+  border-bottom: 10px solid white;
+  border-left: 10px solid white;
+}
+
+/* 7 */
+
+.clock-seven-square1 {
+  width: 6rem;
+  height: 6rem;
+  border-top: 10px solid white;
+  border-right: 10px solid white;
+  border-bottom: 5px solid black;
+  border-left: 10px solid black;
+}
+
+.clock-seven-square2 {
+  width: 6rem;
+  height: 6rem;
+  border-top: 5px solid black;
+  border-right: 10px solid white;
+  border-bottom: 10px solid black;
+  border-left: 10px solid black;
+}
+
+/* 8 */
+
+.clock-eight-square1 {
+  width: 6rem;
+  height: 6rem;
+  border-top: 10px solid white;
+  border-right: 10px solid white;
+  border-bottom: 5px solid white;
+  border-left: 10px solid white;
+}
+
+.clock-eight-square2 {
+  width: 6rem;
+  height: 6rem;
+  border-top: 5px solid white;
+  border-right: 10px solid white;
+  border-bottom: 10px solid white;
+  border-left: 10px solid white;
+}
+
+/* 9 */
+
+.clock-nine-square1 {
+  width: 6rem;
+  height: 6rem;
+  border-top: 10px solid white;
+  border-right: 10px solid white;
+  border-bottom: 5px solid white;
+  border-left: 10px solid white;
+}
+
+.clock-nine-square2 {
+  width: 6rem;
+  height: 6rem;
+  border-top: 5px solid white;
+  border-right: 10px solid white;
+  border-bottom: 10px solid black;
+  border-left: 10px solid black;
+}
+
+/* 0 */
+
+.clock-zero-square1 {
+  width: 6rem;
+  height: 6rem;
+  border-top: 10px solid white;
+  border-right: 10px solid white;
+  border-bottom: 5px solid black;
+  border-left: 10px solid white;
+}
+
+.clock-zero-square2 {
+  width: 6rem;
+  height: 6rem;
+  border-top: 5px solid black;
+  border-right: 10px solid white;
+  border-bottom: 10px solid white;
+  border-left: 10px solid white;
 }
