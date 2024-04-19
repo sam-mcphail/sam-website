@@ -11,7 +11,7 @@ export default function LeapYears() {
   const [visibility, setVisibility] = useState(false)
 
   function showLeapYears() {
-    setVisibility(true)
+    setVisibility(!visibility)
   }
 
   if (!years || isLoading) {
