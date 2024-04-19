@@ -27,11 +27,17 @@ export default function Header() {
 
   function getTime() {
     const d = new Date()
-    const hours = d.getHours().toString()
-    const minutes = d.getMinutes().toString()
+    let hours = d.getHours().toString()
+    let minutes = d.getMinutes().toString()
     let seconds = d.getSeconds().toString()
     if (seconds.length < 2) {
       seconds = '0' + seconds
+    }
+    if (minutes.length < 2) {
+      minutes = '0' + minutes
+    }
+    if (hours.length < 2) {
+      hours = '0' + hours
     }
     return hours + ':' + minutes + ':' + seconds
   }
